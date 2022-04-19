@@ -1,26 +1,7 @@
 # SGCE
 
-[![Build Status](https://travis-ci.org/vinigracindo/sgce.svg?branch=master)](https://travis-ci.org/vinigracindo/sgce)
-[![Coverage Status](https://coveralls.io/repos/github/vinigracindo/sgce/badge.svg?branch=master)](https://coveralls.io/github/vinigracindo/sgce?branch=master)
-[![Requirements Status](https://requires.io/github/vinigracindo/sgce/requirements.svg?branch=master)](https://requires.io/github/vinigracindo/sgce/requirements/?branch=master)
-[![License](https://img.shields.io/pypi/l/django-treenode.svg)](https://img.shields.io/pypi/l/django-treenode.svg)
-
 ## Sistema Gerenciador de Certificados Eletrônicos
-
-### [Changelog](CHANGELOG.md)
-
-Live demo:<br/>
-https://sgce-app.herokuapp.com/<br/>
-https://sgce-app.herokuapp.com/login/ (User: admin | Password: adm11200)
-
-O SGCE está sendo desenvolvido baseado no [SGCE criado pela Universidade Federal de Pampa](https://softwarepublico.gov.br/social/sgce).
-
-## Agradecimentos
-[Raphael Gibson](https://github.com/raphaelgibson)
-
-## Screenshots
-![Main](https://user-images.githubusercontent.com/999040/44290422-0b453080-a24f-11e8-9075-fbcdfab8a96e.png)
-![Certificado](https://user-images.githubusercontent.com/999040/44290578-b81fad80-a24f-11e8-9277-2fcdb33d071a.png)
+O SGCE foi desenvolvido usando o código fonte do sistema desenvolvido por Vinnicyus Gracindo e mantido no [Repositório do código fonte](https://github.com/vinigracindo/sgce).
 
 ## Requerimentos
 1. Django >= 2.0
