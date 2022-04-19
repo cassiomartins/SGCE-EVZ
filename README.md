@@ -1,10 +1,5 @@
 # SGCE
 
-[![Build Status](https://travis-ci.org/vinigracindo/sgce.svg?branch=master)](https://travis-ci.org/vinigracindo/sgce)
-[![Coverage Status](https://coveralls.io/repos/github/vinigracindo/sgce/badge.svg?branch=master)](https://coveralls.io/github/vinigracindo/sgce?branch=master)
-[![Requirements Status](https://requires.io/github/vinigracindo/sgce/requirements.svg?branch=master)](https://requires.io/github/vinigracindo/sgce/requirements/?branch=master)
-[![License](https://img.shields.io/pypi/l/django-treenode.svg)](https://img.shields.io/pypi/l/django-treenode.svg)
-
 ## Sistema Gerenciador de Certificados Eletrônicos
 O SGCE foi desenvolvido usando o código fonte do sistema desenvolvido por Vinnicyus Gracindo e mantido no [Repositório do código fonte](https://github.com/vinigracindo/sgce).
 
