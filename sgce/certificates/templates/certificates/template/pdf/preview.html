@@ -89,18 +89,21 @@
                     font-size: {{ template.content_font_size }}pt;">
 
             {{ template.content|safe }}
-            <div style="text-align:center; padding-top: 120px">
-                <div style="padding-bottom: -50px; padding-left:600px">
+            <br>
+            <br>
+            <br>
+            <div style="text-align:center;">
+                <div style="padding-top: 50px; padding-left:600px">
                     <img src="{{ template.ass_coordinator.url }}" style="width:200px; float:left">
                 </div>
                 
-                <div style="padding-top: -40px; padding-right:600px">
+                <div style="padding-top: -35px; padding-right:600px">
                     <img src="{{ template.ass_manager.url }}" style="width:200px; float:right">
                 </div>
 
-                <div style="padding-top: -10px">
+                <div style="padding-top: -10px;">
                     <div style="padding-left:600px">
-                        <h4>{{ template.name_coordinator }}</h4>
+                        <h4 style="width: max-content;">{{ template.name_coordinator }}</h4>
                     </div>
                 
                     <div style="padding-top: -45px; padding-right:600px">
