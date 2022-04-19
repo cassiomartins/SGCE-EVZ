@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="{% static 'certificates/css/' %}{{ template.font }}.css" />
         <style>
+
             @page{
                 size: a4 landscape;
                 background-image: url('{% if template.background %}{{ template.background.path }}{% endif %}');
@@ -27,6 +28,26 @@
                     height: 190mm;
                 }
             }
+
+            .flex-row {
+                display: flex;
+                flex-direction: row; 
+             } 
+             .flex-col{
+              padding: 15px;
+              margin: 0 15px;
+              background: #ddd;
+              }
+              .flex-row-multicolum{ 
+                display: flex; 
+                flex-direction: row; 
+                flex-wrap: wrap; 
+                flex-flow: row wrap; 
+             }
+             .flex-row-multicolum .flex-col{ width: 40%; margin: 0 15px 15px}
+
+
+
             .content {
                 margin-left: 20mm;
                 margin-right: 20mm;
@@ -50,7 +71,7 @@
         </style>
         <!-- 297mm x 210mm -->
     </head>
-   <body>
+    <body>
         <div class="title"
              style="padding-top: {{ template.title_top_distance }}cm;
                     float: {{ template.title_section_align }};
@@ -68,6 +89,25 @@
                     font-size: {{ template.content_font_size }}pt;">
 
             {{ template.content|safe }}
+            <div style="text-align:center;">
+                <div style="padding-bottom: -50px; padding-left:600px">
+                    <img src="{{ template.ass_coordinator.url }}" style="height:100px;">
+                </div>
+                
+                <div style="padding-top: -50px; padding-right:600px">
+                    <img src="{{ template.ass_manager.url }}" style="height:100px;">
+                </div>
+
+                <div style="padding-top: -10px">
+                    <div style="padding-left:600px">
+                        <h4>{{ template.name_coordinator }}</h4>
+                    </div>
+                
+                    <div style="padding-top: -40px; padding-right:600px">
+                        <h4>{{ template.name_manager }}</h4>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer"
              style="padding-top: {{ template.footer_title_distance }}cm;
@@ -77,7 +117,6 @@
             <p>
                 {% if template.has_qrcode %}
                     {% qr_from_text domain|add:"/certificates/certificate/" size="2" image_format="png" error_correction="L" %} <br/>
-                    Este documento dispensa o uso de assinatura, <br/>
                     a autenticidade pode ser verificada através da URL: <br/>
                     ### MODELO TESTE ###
                 {% else %}

@@ -35,6 +35,7 @@
                 <li class="nav-item"><a href="" data-target="#description" data-toggle="tab" class="nav-link small text-uppercase active">Descrição</a></li>
                 <li class="nav-item"><a href="" data-target="#front" data-toggle="tab" class="nav-link small text-uppercase">Texto Frente</a></li>
                 <li class="nav-item"><a href="" data-target="#back" data-toggle="tab" class="nav-link small text-uppercase">Texto Verso</a></li>
+                <li class="nav-item"><a href="" data-target="#ass" data-toggle="tab" class="nav-link small text-uppercase">Assinaturas</a></li>
                 <li class="nav-item"><a href="" data-target="#background" data-toggle="tab" class="nav-link small text-uppercase">Imagem de Fundo</a></li>
                 <li class="nav-item"><a href="" data-target="#layout" data-toggle="tab" class="nav-link small text-uppercase">Layout</a></li>
                 <li class="nav-item"><a href="" data-target="#configs" data-toggle="tab" class="nav-link small text-uppercase">Configurações</a></li>
@@ -60,6 +61,21 @@
                         {% bootstrap_label "Texto do Verso" label_for="id_backside_content" %}{% if form.backside_content.field.required %}<span class="required-field">*</span>{% endif %}:
                         {% bootstrap_field form.backside_content placeholder='' show_label=False %}
                     </div>
+                    <div id="ass" class="tab-pane fade">
+                      {% bootstrap_label "Nome Coordenador" label_for="id_backside_title" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.name_coordinator placeholder='' show_label=False  %}
+                      {% bootstrap_label "Assinatura Coordenador" label_for="id_backside_title" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.ass_coordinator placeholder='' show_label=False  %}
+                      <br>
+                      <hr>
+                      <br>
+                      {% bootstrap_label "Nome Diretor" label_for="id_backside_title" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.name_manager placeholder='' show_label=False  %}
+                      {% bootstrap_label "Assinatura Diretor" label_for="id_backside_title" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.ass_manager placeholder='' show_label=False  %}
+                    </div>
+
+
                     <div id="background" class="tab-pane fade">
                         {% bootstrap_label "Imagem de Fundo" label_for="id_background" %}{% if form.background.field.required %}<span class="required-field">*</span>{% endif %}:
                         {% bootstrap_field form.background placeholder='' show_label=False  %}
