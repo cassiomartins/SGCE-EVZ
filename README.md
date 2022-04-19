@@ -3,10 +3,6 @@
 ## Sistema Gerenciador de Certificados Eletrônicos
 O SGCE foi desenvolvido usando o código fonte do sistema desenvolvido por Vinnicyus Gracindo e mantido no [Repositório do código fonte](https://github.com/vinigracindo/sgce).
 
-Live demo:<br/>
-https://sgce-app.herokuapp.com/<br/>
-https://sgce-app.herokuapp.com/login/ (User: admin | Password: adm11200)
-
 ## Requerimentos
 1. Django >= 2.0
 2. Python >= 3.6
