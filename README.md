@@ -39,7 +39,7 @@ python manage.py runserver
 
 ### Windows
 ```console
-git clone https://github.com/vinigracindo/sgce.git sgce
+git clone https://github.com/cassiomartins/SGCE-EVZ.git sgce
 cd sgce
 python -m venv .sgce
 .sgce\Scripts\activate
