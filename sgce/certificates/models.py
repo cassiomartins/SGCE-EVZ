@@ -143,11 +143,15 @@ class Template(models.Model):
     has_qrcode = models.BooleanField(verbose_name='tem qrcode?', default=True)
     is_public = models.BooleanField(verbose_name='É público?', default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    location = models.CharField(verbose_name='80', max_length=70, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
     name_coordinator = models.CharField(max_length=70, null=True, blank = True)
+    pos_coordinator  = models.CharField(verbose_name='Cargo Coordenador', max_length=70, null=True, blank = True)
     ass_coordinator  = models.ImageField(null=True, blank = True)
     name_manager     = models.CharField(max_length=70, null=True, blank = True)
+    pos_manager      = models.CharField(verbose_name='Cargo Diretor', max_length=70, null=True, blank = True)
     ass_manager      = models.ImageField(null=True, blank = True)
+
 
     class Meta:
         verbose_name = 'modelo'

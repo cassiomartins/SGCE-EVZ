@@ -48,6 +48,8 @@
                         {% bootstrap_field form.name placeholder='' show_label=False  %}
                         {% bootstrap_label "Evento" label_for="id_event" %}{% if form.event.field.required %}<span class="required-field">*</span>{% endif %}:
                         {% bootstrap_field form.event placeholder='' show_label=False %}
+                        {% bootstrap_label "Localização" label_for="id_location" %}{% if form.location.field.required %}<span class="required-field">*</span>{% endif %}:
+                        {% bootstrap_field form.location placeholder='' show_label=False  %}
                     </div>
                     <div id="front" class="tab-pane fade">
                         {% bootstrap_label "Título" label_for="id_title" %}{% if form.title.field.required %}<span class="required-field">*</span>{% endif %}:
@@ -62,16 +64,20 @@
                         {% bootstrap_field form.backside_content placeholder='' show_label=False %}
                     </div>
                     <div id="ass" class="tab-pane fade">
-                      {% bootstrap_label "Nome Coordenador" label_for="id_backside_title" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_label "Nome Coordenador" label_for="id_name_coordinator" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
                       {% bootstrap_field form.name_coordinator placeholder='' show_label=False  %}
-                      {% bootstrap_label "Assinatura Coordenador" label_for="id_backside_title" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_label "Cargo Coordenador" label_for="id_pos_coordinator" %}{% if form.pos_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.pos_coordinator placeholder='' show_label=False  %}
+                      {% bootstrap_label "Assinatura Coordenador" label_for="id_ass_coordinator" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
                       {% bootstrap_field form.ass_coordinator placeholder='' show_label=False  %}
                       <br>
                       <hr>
                       <br>
-                      {% bootstrap_label "Nome Diretor" label_for="id_backside_title" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_label "Nome Diretor" label_for="id_name_manager" %}{% if form.name_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
                       {% bootstrap_field form.name_manager placeholder='' show_label=False  %}
-                      {% bootstrap_label "Assinatura Diretor" label_for="id_backside_title" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_label "Cargo Diretor" label_for="id_pos_manager" %}{% if form.pos_manager.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.pos_manager placeholder='' show_label=False  %}
+                      {% bootstrap_label "Assinatura Diretor" label_for="id_ass_manager" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
                       {% bootstrap_field form.ass_manager placeholder='' show_label=False  %}
                     </div>
 

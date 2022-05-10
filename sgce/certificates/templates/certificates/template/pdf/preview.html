@@ -89,9 +89,9 @@
                     font-size: {{ template.content_font_size }}pt;">
 
             {{ template.content|safe }}
-            <br>
-            <br>
-            <br>
+            <div style="text-align:center">
+                <p>{{ template.location}}, {{template.created_at|date:"d"}} de {{ template.created_at|date:"F"}} de {{template.created_at|date:"Y"}}</p>
+            </div>
             <div style="text-align:center;">
                 <div style="padding-top: 50px; padding-left:600px">
                     <img src="{{ template.ass_coordinator.url }}" style="width:200px; float:left">
@@ -100,24 +100,36 @@
                 <div style="padding-top: -35px; padding-right:600px">
                     <img src="{{ template.ass_manager.url }}" style="width:200px; float:right">
                 </div>
-
+                <div style="padding-top: -10px ; padding-left:600px">
+                    <h5>_______________________</h5>
+                </div>
+                <div style="padding-top: -50px ; padding-right:600px">
+                    <h5>_______________________</h5>
+                </div>
                 <div style="padding-top: -10px;">
                     <div style="padding-left:600px">
                         <h4 style="width: max-content;">{{ template.name_coordinator }}</h4>
+                        <h6 style="width: max-content;">{{ template.pos_coordinator }}</h6>
                     </div>
                 
-                    <div style="padding-top: -45px; padding-right:600px">
+                    <div style="padding-top: -65px; padding-right:600px">
                         <h4>{{ template.name_manager }}</h4>
+                        
                     </div>
+                    <div style="padding-top: -10px; padding-right:600px">
+                        <h6>{{ template.pos_manager }}</h6>
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
         <div class="footer"
-             style="padding-top: {{ template.footer_title_distance }}cm;
+             style="padding-top: {{ template.footer_title_distance }} - cm;
                     float: {{ template.footer_section_align }};
                     text-align: {{ template.footer_text_align }};
                     color: {{ template.footer_text_color }};">
-            <p>
+            <p style="padding-top: -30px">
                 {% if template.has_qrcode %}
                     {% qr_from_text domain|add:"/certificates/certificate/" size="2" image_format="png" error_correction="L" %} <br/>
                     A autenticidade deste certificado pode ser verificada através da URL: <br/>
