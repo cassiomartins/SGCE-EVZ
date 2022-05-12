@@ -112,9 +112,9 @@
                 {% if certificate.template.has_qrcode %}
                     {% qr_from_text domain|add:"/certificates/certificate/"|add:certificate.hash size="2" image_format="png" error_correction="L" %} <br/>
                     A autenticidade deste certificado pode ser verificada através da URL: <br/>
-                    {{ domain }}/certificates/certificate/{{ certificate.hash }}/
+                    https://certificados.evz.ufg.br/certificates/certificate/{{ certificate.hash }}/
                 {% else %}
-                    A autenticidade deste certificado pode ser verificada em: {{ domain }}/certificates/certificate/{{ certificate.hash }}/
+                    A autenticidade deste certificado pode ser verificada em: https://certificados.evz.ufg.br/certificates/certificate/{{ certificate.hash }}/
                 {% endif %}
             </p>
         </div>
