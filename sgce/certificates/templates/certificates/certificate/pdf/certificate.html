@@ -67,16 +67,16 @@
                     color: {{ certificate.template.content_text_color }};
                     font-size: {{ certificate.template.content_font_size }}pt;">
 
-            {{ certificate.get_safe_content }}
+            {{ certificate.template.content }}
             <div style="text-align:center">
                 <p>{{ certificate.template.location}}, {{certificate.template.created_at|date:"d"}} de {{ certificate.template.created_at|date:"F"}} de {{certificate.template.created_at|date:"Y"}}</p>
             </div>
             <div style="text-align:center;">
-                <div style="padding-top: 50px; padding-left:600px">
+                <div style="padding-top: {% if certificate.template.px_coordinator %} {{ certificate.template.px_coordinator}} {% else %} 50{% endif %}px; padding-left:600px">
                     <img src="{{ certificate.template.ass_coordinator.url }}" style="width:200px; float:left">
                 </div>
                 
-                <div style="padding-top: -35px; padding-right:600px">
+                <div style="padding-top: -{% if certificate.template.px_manager %} {{ certificate.template.px_manager }} {% else %}35{% endif %}px; padding-right:600px">
                     <img src="{{ certificate.template.ass_manager.url }}" style="width:200px; float:right">
                 </div>
                 <div style="padding-top: -10px; padding-left:600px">
@@ -104,11 +104,11 @@
             </div>
         </div>
         <div class="footer"
-             style="padding-top: -1cm;
+             style="padding-top: {{ certificate.template.footer_title_distance }} - cm;
                     float: {{ certificate.template.footer_section_align }};
                     text-align: {{ certificate.template.footer_text_align }};
                     color: {{ certificate.template.footer_text_color }};">
-            <p>
+            <p style="padding-top: -50px">
                 {% if certificate.template.has_qrcode %}
                     {% qr_from_text domain|add:"/certificates/certificate/"|add:certificate.hash size="2" image_format="png" error_correction="L" %} <br/>
                     A autenticidade deste certificado pode ser verificada através da URL: <br/>

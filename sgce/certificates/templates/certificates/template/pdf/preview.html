@@ -93,11 +93,11 @@
                 <p>{{ template.location}}, {{template.created_at|date:"d"}} de {{ template.created_at|date:"F"}} de {{template.created_at|date:"Y"}}</p>
             </div>
             <div style="text-align:center;">
-                <div style="padding-top: 50px; padding-left:600px">
+                <div style="padding-top: {% if template.px_coordinator %} {{template.px_coordinator}} {% else %} 50{% endif %}px; padding-left:600px">
                     <img src="{{ template.ass_coordinator.url }}" style="width:200px; float:left">
                 </div>
                 
-                <div style="padding-top: -35px; padding-right:600px">
+                <div style="padding-top: {% if template.px_manager %} {{ template.px_manager }} {% else %}-35{% endif %}px; padding-right:600px">
                     <img src="{{ template.ass_manager.url }}" style="width:200px; float:right">
                 </div>
                 <div style="padding-top: -10px ; padding-left:600px">

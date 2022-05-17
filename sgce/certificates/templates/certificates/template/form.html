@@ -79,6 +79,14 @@
                       {% bootstrap_field form.pos_manager placeholder='' show_label=False  %}
                       {% bootstrap_label "Assinatura Diretor" label_for="id_ass_manager" %}{% if form.ass_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
                       {% bootstrap_field form.ass_manager placeholder='' show_label=False  %}
+                      <br>
+                      <hr>
+                      <br>
+                      {% bootstrap_label "Px Coordenador" label_for="id_px_coordinator" %}{% if form.px_coordinator.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.px_coordinator placeholder='' show_label=False  %}
+                      {% bootstrap_label "Px Diretor" label_for="id_px_manager" %}{% if form.px_manager.field.required %}<span class="required-field">*</span>{% endif %}:
+                      {% bootstrap_field form.px_manager placeholder='' show_label=False  %}
+        
                     </div>
 
 

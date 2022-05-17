@@ -151,8 +151,8 @@ class Template(models.Model):
     name_manager     = models.CharField(max_length=70, null=True, blank = True)
     pos_manager      = models.CharField(verbose_name='Cargo Diretor', max_length=70, null=True, blank = True)
     ass_manager      = models.ImageField(null=True, blank = True)
-
-
+    px_coordinator   = models.IntegerField(null=True, blank =True, help_text='Default Value 50')
+    px_manager       = models.IntegerField(null=True, blank =True, verbose_name='Default Value 35')
     class Meta:
         verbose_name = 'modelo'
         ordering = ['-created_at']
