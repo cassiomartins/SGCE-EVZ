@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-SITE_URL = os.environ.get("SITE_URL", "http://localhost:8000"),
+SITE_URL = SITE_URL = os.environ.get("SITE_URL", "http://localhost:8000"),
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "UNSAFE_KEY"),
@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "UNSAFE_KEY"),
 # 0 = False, 1 = True
 DEBUG = int(os.environ.get("DEBUG", default=1)) 
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost 127.0.0.1 herokuapp.com").split(" ")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost 127.0.0.1 herokuapp.com certificados.evz.ufg.br").split(" ")
 
 INTERNAL_IPS = (
     '127.0.0.1',
@@ -95,12 +95,17 @@ WSGI_APPLICATION = 'sgce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('SQL_ENGINE', 'django.db.backends.sqlite3'),
-        'NAME': os.environ.get('SQL_DATABASE', os.path.join(BASE_DIR, 'db.sqlite3')),
-        'USER': os.environ.get('SQL_USER', ''),
-        'PASSWORD': os.environ.get('SQL_PASSWORD', ''),
-        'HOST': os.environ.get('SQL_HOST', 'localhost'),
-        'PORT': os.environ.get('SQL_PORT', ''),
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'certificados',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'MCaJSzY5TzWRiM3IsDCZAI',
+
+        'HOST': 'localhost',
+
+        'PORT': '5432',
     }
 }
 
@@ -141,7 +146,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media files
