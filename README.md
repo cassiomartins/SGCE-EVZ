@@ -24,7 +24,7 @@ O SGCE foi desenvolvido usando o código fonte do sistema desenvolvido por Vinni
 
 ### Linux
 ```console
-git clone https://github.com/vinigracindo/sgce.git sgce
+git clone https://github.com/cassiomartins/SGCE-EVZ.git sgce
 cd sgce
 python -m venv .sgce
 source .sgce/bin/activate

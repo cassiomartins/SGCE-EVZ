@@ -1,3 +1,4 @@
+
 """
 Django settings for sgce project.
 
@@ -26,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "UNSAFE_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # 0 = False, 1 = True
-DEBUG = int(os.environ.get("DEBUG", default=0)) 
+DEBUG = int(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost 127.0.0.1 herokuapp.com certificados.evz.ufg.br").split(" ")
 
