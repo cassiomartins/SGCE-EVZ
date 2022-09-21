@@ -68,17 +68,17 @@
                     font-size: {{ certificate.template.content_font_size }}pt;">
 
                 {{ certificate.get_safe_content }}
-                
+
             <div style="text-align:center">
-                <p>{{ certificate.template.location}}, {{certificate.template.created_at|date:"d"}} de {{ certificate.template.created_at|date:"F"}} de {{certificate.template.created_at|date:"Y"}}</p>
+                <p>{{ certificate.template.location}}, {{certificate.template.day}} de {{ certificate.template.month}} de {{certificate.template.year}}.</p>
             </div>
             <div style="text-align:center;">
                 <div style="padding-top: {% if certificate.template.px_coordinator %} {{ certificate.template.px_coordinator}} {% else %} 50{% endif %}px; padding-left:600px">
-                    <img src="{{ certificate.template.ass_coordinator.url }}" style="width:200px; float:left">
+                    <img src="{{ certificate.template.ass_manager.url }}" style="width:200px; float:left">
                 </div>
                 
                 <div style="padding-top: -{% if certificate.template.px_manager %} {{ certificate.template.px_manager }} {% else %}35{% endif %}px; padding-right:600px">
-                    <img src="{{ certificate.template.ass_manager.url }}" style="width:200px; float:right">
+                    <img src="{{ certificate.template.ass_coordinator.url }}" style="width:200px; float:right">
                 </div>
                 <div style="padding-top: -10px; padding-left:600px">
                     <h5>_______________________</h5>
@@ -88,22 +88,23 @@
                 </div>
                 <div style="padding-top: -10px;">
                     <div style="padding-left:600px">
-                        <h4 style="width: max-content;">{{ certificate.template.name_coordinator }}</h4>
-                        <h6 style="width: max-content;">{{ certificate.template.pos_coordinator }}</h6>
+                        <h4 style="width: max-content;">{{ certificate.template.name_manager }}</h4>
+                        <h6 style="width: max-content;">{{ certificate.template.pos_manager }}</h6>
                     </div>
                 
                     <div style="padding-top: -65px; padding-right:600px">
-                        <h4>{{ certificate.template.name_manager }}</h4>
+                        <h4>{{ certificate.template.name_coordinator }}</h4>
                         
                     </div>
                     <div style="padding-top: -10px; padding-right:600px">
-                        <h6>{{ certificate.template.pos_manager }}</h6>
+                        <h6>{{ certificate.template.pos_coordinator }}</h6>
                         
                     </div>
                     
                 </div>
             </div>
         </div>
+
         <div class="footer"
              style="padding-top: {{ certificate.template.footer_title_distance }} - cm;
                     float: {{ certificate.template.footer_section_align }};

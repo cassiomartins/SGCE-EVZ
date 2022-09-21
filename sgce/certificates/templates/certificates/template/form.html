@@ -50,6 +50,12 @@
                         {% bootstrap_field form.event placeholder='' show_label=False %}
                         {% bootstrap_label "Localização" label_for="id_location" %}{% if form.location.field.required %}<span class="required-field">*</span>{% endif %}:
                         {% bootstrap_field form.location placeholder='' show_label=False  %}
+                        {% bootstrap_label "Dia emissão" label_for="id_day" %}{% if form.day.field.required %}<span class="required-field">*</span>{% endif %}:
+                        {% bootstrap_field form.day placeholder="Exemplo: 01" show_label=False  %}
+                        {% bootstrap_label "Mês emissão" label_for="id_month" %}{% if form.month.field.required %}<span class="required-field">*</span>{% endif %}:
+                        {% bootstrap_field form.month placeholder="Exemplo: Janeiro" show_label=False  %}
+                        {% bootstrap_label "Ano emissão" label_for="id_year" %}{% if form.year.field.required %}<span class="required-field">*</span>{% endif %}:
+                        {% bootstrap_field form.year placeholder="Exemplo: 2022" show_label=False  %}
                     </div>
                     <div id="front" class="tab-pane fade">
                         {% bootstrap_label "Título" label_for="id_title" %}{% if form.title.field.required %}<span class="required-field">*</span>{% endif %}:

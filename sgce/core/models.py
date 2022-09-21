@@ -11,6 +11,9 @@ class Event(models.Model):
     start_date = models.DateField('data de início')
     end_date = models.DateField('data de término')
     location = models.CharField('local de realização', max_length=255, blank=True)
+    day = models.CharField('dia de emissão do certificado', max_length=255, blank=True)
+    month = models.CharField('mês de emissão do certificado', max_length=255, blank=True)
+    year = models.CharField('ano de emissão do certificado', max_length=255, blank=True)
     has_public_page = models.BooleanField(
         'Criar uma página pública',
         help_text=

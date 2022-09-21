@@ -90,38 +90,41 @@
 
             {{ template.content|safe }}
             <div style="text-align:center">
-                <p>{{ template.location}}, {{template.created_at|date:"d"}} de {{ template.created_at|date:"F"}} de {{template.created_at|date:"Y"}}</p>
+                <p>{{ template.location}}, {{template.day}} de {{ template.month}} de {{template.year}}</p>
             </div>
             <div style="text-align:center;">
                 <div style="padding-top: {% if template.px_coordinator %} {{template.px_coordinator}} {% else %} 50{% endif %}px; padding-left:600px">
-                    <img src="{{ template.ass_coordinator.url }}" style="width:200px; float:left">
-                </div>
-                
-                <div style="padding-top: {% if template.px_manager %} {{ template.px_manager }} {% else %}-35{% endif %}px; padding-right:600px">
                     <img src="{{ template.ass_manager.url }}" style="width:200px; float:right">
                 </div>
+                <div style="padding-top: {% if template.px_manager %} {{ template.px_manager }} {% else %}-35{% endif %}px; padding-right:600px">
+                    <img src="{{ template.ass_coordinator.url }}" style="width:200px; float:left">
+                </div>
+
                 <div style="padding-top: -10px ; padding-left:600px">
                     <h5>_______________________</h5>
                 </div>
                 <div style="padding-top: -50px ; padding-right:600px">
                     <h5>_______________________</h5>
                 </div>
+
                 <div style="padding-top: -10px;">
                     <div style="padding-left:600px">
-                        <h4 style="width: max-content;">{{ template.name_coordinator }}</h4>
-                        <h6 style="width: max-content;">{{ template.pos_coordinator }}</h6>
+                        <h4 style="width: max-content;">{{ template.name_manager }}</h4>
                     </div>
-                
+                    <div style="padding-left:600px">
+                        <h6 style="width: max-content;">{{ template.pos_manager }}</h6>
+                    </div>
+                </div>
+                <div style="padding-top: -10px;">
                     <div style="padding-top: -65px; padding-right:600px">
-                        <h4>{{ template.name_manager }}</h4>
-                        
+                        <h4 style="width: max-content;">{{ template.name_coordinator }}</h4>
                     </div>
                     <div style="padding-top: -10px; padding-right:600px">
-                        <h6>{{ template.pos_manager }}</h6>
-                        
+                        <h6 style="width: max-content;">{{ template.pos_coordinator }}</h6>
                     </div>
-                    
                 </div>
+                    
+
             </div>
         </div>
         <div class="footer"
