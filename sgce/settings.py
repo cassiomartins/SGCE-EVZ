@@ -19,14 +19,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-SITE_URL = SITE_URL = os.environ.get("SITE_URL", "http://localhost:8000"),
+SITE_URL = os.environ.get("SITE_URL", "http://localhost:8000"),
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "UNSAFE_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # 0 = False, 1 = True
-DEBUG = int(os.environ.get("DEBUG", default=1)) 
+DEBUG = int(os.environ.get("DEBUG", default=0)) 
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost 127.0.0.1 herokuapp.com certificados.evz.ufg.br").split(" ")
 
@@ -146,11 +146,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = os.path.join(BASE_DIR, 'static')
+#STATIC_URL = '/static/'
+STATIC_URL = os.path.join(BASE_DIR, 'static/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media files
-MEDIA_URL = '/media/'
+#MEDIA_URL = '/media/'
+MEDIA_URL = os.path.join(BASE_DIR, 'media/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Login
