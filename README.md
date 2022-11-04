@@ -7,7 +7,8 @@ O SGCE foi desenvolvido usando o código fonte do sistema desenvolvido por Vinni
 1. Django >= 2.0
 2. Python >= 3.6
 3. PostgresSQL >= 9.4
-    Para windows:
+
+Para windows:
 4. Psycopg2 >= 2.8.6
 
 ## Como desenvolver?
