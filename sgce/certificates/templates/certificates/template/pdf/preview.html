@@ -92,6 +92,7 @@
             <div style="text-align:center">
                 <p>{{ template.location}}, {{template.day}} de {{ template.month}} de {{template.year}}</p>
             </div>
+        {%  if template.has_manualSignature == False %}
             <div style="text-align:center;">
                 <div style="padding-top: {% if template.px_coordinator %} {{template.px_coordinator}} {% else %} 50{% endif %}px; padding-left:600px">
                     <img src="{{ template.ass_manager.url }}" style="width:200px; float:right">
@@ -127,12 +128,13 @@
 
             </div>
         </div>
+        {% endif %}
         <div class="footer"
-             style="padding-top: {{ template.footer_title_distance }} - cm;
+             style="padding-top: {{ template.footer_title_distance }}cm;
                     float: {{ template.footer_section_align }};
                     text-align: {{ template.footer_text_align }};
                     color: {{ template.footer_text_color }};">
-            <p style="padding-top: -30px">
+            <p style="padding-bottom: -{{ template.footer_title_distance }}cm">
                 {% if template.has_qrcode %}
                     {% qr_from_text domain|add:"/certificates/certificate/" size="2" image_format="png" error_correction="L" %} <br/>
                     A autenticidade deste certificado pode ser verificada através da URL: <br/>

@@ -148,14 +148,15 @@ class Template(models.Model):
     month = models.CharField(verbose_name='80', max_length=70, null=True, blank=True)
     year = models.CharField(verbose_name='80', max_length=70, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
-    name_coordinator = models.CharField(max_length=70, null=False, blank = False)
-    pos_coordinator  = models.CharField(verbose_name='Cargo Coordenador', max_length=70, null=False, blank = False)
-    ass_coordinator  = models.ImageField(null=False, blank = False)
-    name_manager     = models.CharField(max_length=70, null=False, blank = False)
-    pos_manager      = models.CharField(verbose_name='Cargo Diretor', max_length=70, null=False, blank = False)
-    ass_manager      = models.ImageField(null=False, blank = False)
+    name_coordinator = models.CharField(max_length=70, null=True, blank = True)
+    pos_coordinator  = models.CharField(verbose_name='Cargo Coordenador', max_length=70, null=True, blank = True)
+    ass_coordinator  = models.ImageField(null=True, blank = True)
+    name_manager     = models.CharField(max_length=70, null=True, blank = True)
+    pos_manager      = models.CharField(verbose_name='Cargo Diretor', max_length=70, null=True, blank = True)
+    ass_manager      = models.ImageField(null=True, blank = True)
     px_coordinator   = models.IntegerField(null=True, blank =True, help_text='Default Value 50')
     px_manager       = models.IntegerField(null=True, blank =True, verbose_name='Default Value 35')
+    has_manualSignature = models.BooleanField(verbose_name='Não, a imagem de fundo já possui as assinaturas', default=False)
     class Meta:
         verbose_name = 'modelo'
         ordering = ['-created_at']
