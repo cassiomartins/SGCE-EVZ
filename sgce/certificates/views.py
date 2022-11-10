@@ -100,8 +100,11 @@ class TemplateListView(LoginRequiredMixin, ListView):
     context_object_name = 'templates'
 
     def get_queryset(self):
+        queryset = super(TemplateListView, self).get_queryset()
+        user = self.request.user
+        return queryset if user.is_superuser else queryset.filter(Q(event__created_by=self.request.user) | Q(is_public=True)).distinct()
         # Show all publics template and all templates created by logged user
-        return Template.objects.filter(Q(event__created_by=self.request.user) | Q(is_public=True)).distinct()
+        #return Template.objects.filter(Q(event__created_by=self.request.user) | Q(is_public=True)).distinct()
 
 
 class TemplateCreateView(LoginRequiredMixin, PermissionRequiredMixin, SuccessMessageMixin, CreateView):
